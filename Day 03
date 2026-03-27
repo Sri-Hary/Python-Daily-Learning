@@ -1,0 +1,176 @@
+#Comparison Operators
+
+Task-1
+The Security Gate"
+Imagine you are writing the logic for a high-security building entrance. You need to write a script that checks several conditions for a visitor to be granted access.
+
+The Variables:
+
+Python
+visitor_age = 25
+required_age = 21
+visitor_clearance_level = 5
+min_clearance = 3
+is_blacklisted = False
+
+Your Challenge:
+Write five separate print statements using comparison operators (and logical operators if needed) to answer the following:
+Age Check: Is the visitor's age greater than or equal to the required age?
+Clearance Check: Is the visitor's clearance level strictly higher than the minimum clearance?
+Identity Check: Is the visitor's clearance level not equal to 0?
+Blacklist Check: Is the is_blacklisted status equal to False?
+Final Logic: Does the visitor meet the age requirement AND have a clearance level of at least 5?
+
+
+print(visitor_age >= required_age)
+print(visitor_clearance_level > min_clearance)
+print(visitor_clearance_level != 0)
+print(is_blacklisted == False)
+print(visitor_age >= required_age)
+
+
+Task-2
+
+The Inventory Auditor"
+You are managing a warehouse database. You need to compare incoming shipment data against the warehouse standards.
+
+The Variables:
+
+Python
+item_count = "50"        # Note: This is a string
+storage_capacity = 100
+current_stock = 45.0     # Note: This is a float
+restricted_items = ["Chemicals", "Electronics", "Perishables"]
+new_item = "Electronics"
+
+Your Challenge:
+Write the Python expressions for the following (using print() to see the result):
+The Type Trap: Check if item_count is equal to 50. (Hint: Pay attention to the data types!)
+The Comparison: Check if current_stock is less than or equal to storage_capacity.
+The Membership Test: Check if new_item is "in" the restricted_items list.
+The Identity Check: Check if the type of item_count is NOT the same as the type of storage_capacity.
+The Threshold: Check if current_stock plus int(item_count) exceeds the storage_capacity.
+
+print(item_count == "50")
+print(current_stock <= storage_capacity)
+print(new_item in restricted_items)
+print(type(item_count) != (storage_capacity))
+print(current_stock + int(item_count) > storage_capacity)
+
+
+Task-3
+
+The Sorting Hat"
+You are building a system to organize a library. You need to use comparison operators to validate the following logic.
+
+The Variables:
+
+Python
+book_a = "Apple"
+book_b = "Banana"
+page_count_a = 150
+page_count_b = 150.0
+genres = ["Sci-Fi", "Fantasy", "Mystery"]
+
+Your Challenge:
+Write the Python expression (the print statement) for these 4 scenarios:
+Alphabetical Order: Is book_a greater than book_b? (Does "Apple" come after "Banana"?)
+The Float Equality: Is page_count_a exactly equal to page_count_b?
+The Case Sensitive Trap: Is "apple" (lowercase) equal to book_a?
+List Comparison: If you compare [1, 2, 3] < [1, 2, 4], what is the result?
+
+print(book_a > book_b)
+print(page_count_a == page_count_b)
+print("apple" == book_a)
+print([1, 2, 3] < [1, 2, 4])
+
+
+
+#Logical Operator
+
+#Task-1
+The Mortgage Validator"
+You are writing the logic for a bank's automated loan officer. To qualify for a mortgage, a customer must meet specific combinations of criteria.
+
+The Variables:
+
+Python
+credit_score = 720
+annual_income = 45000
+has_bankruptcy = False
+has_guarantor = True
+
+Your Challenge:
+Write the Python expressions (using print()) to check if the applicant follows these rules:
+Standard Requirement: Is the credit_score greater than 700 and is the annual_income at least 50,000?
+The "Safety Net" Rule: Is the annual_income greater than 40,000 or do they have a has_guarantor?
+Clean Record Check: Use the not operator to check if the applicant does not have a bankruptcy.
+The Complex Approval: An applicant is approved if:
+(They have a credit_score over 700 and not has_bankruptcy)
+or
+(They have a has_guarantor)
+
+print(credit_score > 700 and annual_income >= 50000)
+print(annual_income > 40000 or has_guarantor)
+print(not has_bankruptcy)
+print(credit_score > 700 and not has_bankruptcy) or (has_guarantor)
+
+
+Task-2
+
+The Smart Home System"
+You are programming a smart home controller. The system has to decide whether to turn on the Outdoor Security Lights.
+
+The Variables:
+
+Python
+is_nighttime = True
+motion_detected = False
+is_manual_override = True
+battery_low = False
+
+Your Challenge:
+Write the Python expression (the print statement) for these 4 logic rules:
+The Standard Trigger: Lights should turn on if it is is_nighttime AND motion_detected.
+The Override: Lights should turn on if is_manual_override is True OR if both is_nighttime and motion_detected are True.
+The Power Saver: Lights should turn on if (is_nighttime is True) AND (motion_detected is True OR is_manual_override is True).
+The Safety Lock: Lights should NEVER turn on if battery_low is True. Create an expression that checks if the lights can be on (use not battery_low) AND is_manual_override is True.
+
+print(is_nighttime and motion_detected)
+print(is_manual_override or (is_nighttime) and (motion_detected))
+print(is_nighttime and (motion_detected or is_manual_override))
+print(not battery_low and is_manual_override)
+
+
+Task-3
+
+The Guest List Validator"
+In Python:
+
+Empty things (like "", 0, [], or None) are considered False.
+
+Non-empty things (like "Hello", 1, or [1, 2]) are considered True.
+
+The Variables:
+
+Python
+guest_name = "Alex"
+age = 0
+invitation_code = ""
+is_vip = True
+
+Your Challenge:
+Predict the result of these 4 expressions:
+The Name Check: guest_name and is_vip
+(Hint: If the first value is "True", and returns the second value.)
+The Missing Info: invitation_code or "DEFAULT_CODE"
+(Hint: If the first value is "False", or returns the second value.)
+The Zero Problem: age or 21
+(If age is 0, what will this return?)
+The Double Not: not not guest_name
+(What happens when you flip a non-empty string twice?)
+
+print(guest_name and is_vip)
+print(invitation_code or "DEFAULT_CODE")
+print(age or 21)
+print(not not guest_name)
